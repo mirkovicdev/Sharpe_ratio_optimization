@@ -9,15 +9,15 @@ It visualizes the **tangency portfolio** where the **Capital Market Line (CML)**
 ## 🧠 What It Does
 
 Given:
-- A covariance matrix of asset returns \( \Sigma \)
-- A vector of expected returns \( \mu \)
-- A specified risk-free rate \( R_f \)
+- A covariance matrix of asset returns $\Sigma$
+- A vector of expected returns $\mu$
+- A specified risk-free rate $R_f$
 
 The optimizer solves:
 
-\[
+$$
 \max_w \quad \frac{\mu^T w - R_f}{\sqrt{w^T \Sigma w}} \quad \text{subject to} \quad \sum w_i = 1, \quad w_i \geq 0
-\]
+$$
 
 Rather than solving this non-convex problem directly, it:
 1. Sweeps through a range of target returns
